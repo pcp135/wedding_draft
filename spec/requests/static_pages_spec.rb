@@ -40,6 +40,31 @@ describe "StaticPages" do
     
   end
   
+  describe "Locations Page" do
+    
+    it "should have a header 'Locations'" do
+      visit '/static_pages/locations'
+      expect(page).to have_content('Locations')
+    end
+    it "should have a title 'Locations'" do
+      visit '/static_pages/locations'
+      expect(page).to have_title('Locations')
+    end
+    it "should mention Burg Schwarzenstein" do
+      visit '/static_pages/locations'
+      expect(page).to have_content('Burg Schwarzenstein')
+    end
+    it "should mention Hotel" do
+      visit '/static_pages/locations'
+      expect(page).to have_content('hotel')
+    end
+    it "should mention Airport" do
+      visit '/static_pages/locations'
+      expect(page).to have_content('Airport')
+    end
+    
+  end
+  
   describe "German vs English Page" do 
     
     it "should have a title 'German vs English'" do
