@@ -22,4 +22,7 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def germanvsenglish
+  end
 end

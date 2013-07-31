@@ -31,5 +31,25 @@ describe "StaticPages" do
     end
     
   end
+  
+  describe "German vs English Page" do 
+    
+    it "should have a title 'German vs English'" do
+      visit '/static_pages/germanvsenglish'
+      expect(page).to have_content('German vs English')
+    end
+    it "should talk about the ceremony" do
+      visit '/static_pages/germanvsenglish'
+      expect(page).to have_content('ceremony')
+    end
+    it "should mention outfits" do
+      visit '/static_pages/germanvsenglish'
+      expect(page).to have_content('outfits')
+    end
+    it "should talk about the break" do
+      visit '/static_pages/germanvsenglish'
+      expect(page).to have_content('break')
+    end
+  end
       
 end
