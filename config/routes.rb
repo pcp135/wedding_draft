@@ -1,4 +1,12 @@
 WeddingDraft::Application.routes.draw do
+  get "static_pages/home"
+  get "static_pages/program"
+  get "static_pages/locations"
+  get "static_pages/hotels"
+  get "static_pages/region"
+  get "static_pages/registry"
+  get "static_pages/rsvp"
+  get "static_pages/contact"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
