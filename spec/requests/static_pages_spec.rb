@@ -113,5 +113,68 @@ describe "StaticPages" do
       expect(page).to have_content('break')
     end
   end
+  
+  describe "The Region Page" do
+    
+    it "should have a header 'The Region'" do
+      visit '/static_pages/region'
+      expect(page).to have_content('The Region')
+    end
+    it "should have a title 'The Region'" do
+      visit '/static_pages/region'
+      expect(page).to have_title('The Region')
+    end
+    it "should mention Rhein" do
+      visit '/static_pages/region'
+      expect(page).to have_content('Rhein')
+    end
+    it "should mention vineyards" do
+      visit '/static_pages/region'
+      expect(page).to have_content('vineyards')
+    end
+    it "should mention cruise" do
+      visit '/static_pages/region'
+      expect(page).to have_content('cruise')
+    end
+    it "should mention bike" do
+      visit '/static_pages/region'
+      expect(page).to have_content('bike')
+    end
+    
+  end
+  
+  describe "Registry Page" do
+    
+    it "should have a header 'Gift Registry'" do
+      visit '/static_pages/registry'
+      expect(page).to have_content('Gift Registry')
+    end
+    it "should have a title 'Gift Registry'" do
+      visit '/static_pages/registry'
+      expect(page).to have_title('Gift Registry')
+    end
+    it "should apologise for not being ready yet" do
+      visit '/static_pages/registry'
+      expect(page).to have_content("Sorry, we've not had a chance to organise this yet, please check back later")
+    end
+
+  end
       
+  describe "RSVP Page" do
+    
+    it "should have a header 'RSVP'" do
+      visit '/static_pages/rsvp'
+      expect(page).to have_content('RSVP')
+    end
+    it "should have a title 'RSVP'" do
+      visit '/static_pages/rsvp'
+      expect(page).to have_title('RSVP')
+    end
+    it "should mention a few questions" do
+      visit '/static_pages/rsvp'
+      expect(page).to have_content("we put together a few questions for you")
+    end
+
+  end
+
 end
