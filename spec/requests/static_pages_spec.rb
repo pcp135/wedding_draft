@@ -177,4 +177,24 @@ describe "StaticPages" do
 
   end
 
+  describe "RSVP Page" do
+    
+    it "should have a header 'Contact Us'" do
+      visit '/static_pages/contact'
+      expect(page).to have_content('Contact Us')
+    end
+    it "should have a title 'Contact Us'" do
+      visit '/static_pages/contact'
+      expect(page).to have_title('Contact Us')
+    end
+    it "should mention Phil's email" do
+      visit '/static_pages/contact'
+      expect(page).to have_content("phil@parsons.uk.com")
+    end
+    it "should mention Stef's email" do
+      visit '/static_pages/contact'
+      expect(page).to have_content("steffihense@gmail.com")
+    end
+
+  end
 end
