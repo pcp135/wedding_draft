@@ -195,6 +195,10 @@ describe "StaticPages" do
       visit '/static_pages/contact'
       expect(page).to have_content("steffihense@gmail.com")
     end
+    it "should mention questions" do
+      visit '/static_pages/contact'
+      expect(page).to have_content("questions")
+    end
 
   end
 end
