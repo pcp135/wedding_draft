@@ -4,7 +4,7 @@ require 'active_support/inflector'
 
 notification :terminal_notifier
 
-guard 'rspec', all_after_pass: false, cli: '--drb' do
+guard 'rspec', after_all_pass: false, cli: '--drb' do
   
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
