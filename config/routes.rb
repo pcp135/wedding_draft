@@ -1,5 +1,6 @@
 WeddingDraft::Application.routes.draw do
   root 'static_pages#home'
+  match '/registration', to: 'users#new', via: 'get'
   match '/program', to: 'static_pages#program', via: 'get'
   match '/locations', to: 'static_pages#locations', via: 'get'
   match '/hotels', to: 'static_pages#hotels', via: 'get'
