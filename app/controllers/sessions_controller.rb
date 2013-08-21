@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_action :signed_in_user, except: [:destroy]
 
   def new
   end
