@@ -4,12 +4,18 @@
 			<%= link_to "Phil & Stef's Wedding - dev", root_path, id: "logo" %>
 			<nav>
 				<ul class="nav pull-right">
-					<li><%= link_to "Program", program_path %></li>
-					<li><%= link_to "Locations", locations_path %></li>
-					<li><%= link_to "Hotels", hotels_path %></li>
-					<li><%= link_to "Wedding", germanvsenglish_path %></li>
-					<li><%= link_to "Region", region_path %></li>
-					<li><%= link_to "Registry", registry_path %></li>
+					<% if signed_in? %>
+						<li><%= link_to "Program", program_path %></li>
+						<li><%= link_to "Locations", locations_path %></li>
+						<li><%= link_to "Hotels", hotels_path %></li>
+						<li><%= link_to "Wedding", germanvsenglish_path %></li>
+						<li><%= link_to "Region", region_path %></li>
+						<li><%= link_to "Registry", registry_path %></li>
+						<li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+					<% else %>
+						<li><%= link_to "Sign in", signin_path %></li>
+						<li><%= link_to "Register", registration_path %></li>
+					<% end %>
 				</ul>
 			</nav>
 		</div>

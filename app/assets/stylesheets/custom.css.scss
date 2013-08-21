@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+$grayMediumLight: #eaeaea;
+$lightGray: #999;
+
 html {
 	overflow-y: scroll;
 }
@@ -56,8 +59,6 @@ p {
 	text-decoration: none;
 }
 
-$grayMediumLight: #eaeaea;
-
 @mixin box_sizing {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -101,7 +102,7 @@ footer {
 	margin-top: 45px;
 	padding-top: 5px;
 	border-top: 1px solid $grayMediumLight;
-	color: #999;
+	color: $lightGray;
 	a {
 		color: #555;
 		&:hover {
