@@ -2,3 +2,26 @@
 <h1>Register</h1>
 
 <p>Thanks for visiting our wedding page.  So that not just anyone can access all the details we'd like you to just quickly register, please provide your name and e-mail address below, we'll send you a quick e-mail to confirm the address and then we'll be all set!</p>
+
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@user) do |f| %>
+
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+			
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+			<%= f.label :password %>
+			<%= f.text_field :password %>
+
+			<%= f.label :password_confirmation, "Confirmation" %>
+			<%= f.text_field :password_confirmation %>
+			
+			<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+		<% end %>
+	</div>		
+</div>	
+		
+			
