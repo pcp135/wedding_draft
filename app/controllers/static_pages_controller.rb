@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  skip_before_action :signed_in_user, only: [:home]
+
   def home
   end
 
@@ -25,4 +27,5 @@ class StaticPagesController < ApplicationController
 
   def germanvsenglish
   end
+  
 end
