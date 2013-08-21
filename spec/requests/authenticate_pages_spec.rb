@@ -36,4 +36,25 @@ describe "Authentication" do
       end
     end
   end
+  describe "authorization" do
+    describe "for non-signed in users" do
+      let(:user) { FactoryGirl.create(:user)}
+      describe "in the static pages" do
+        describe "visiting the program page" do
+          before { visit program_path }
+          it {should have_title('Sign in')}
+          describe "after signing in" do
+            before do 
+              fill_in "Email", with: user.email
+              fill_in "Password", with: user.password
+              click_button "Sign in"
+            end
+            it "should render the desired protected page" do
+              expect(page).to have_title('Program')
+            end
+          end 
+        end
+      end
+    end
+  end
 end
