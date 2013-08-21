@@ -1,4 +1,5 @@
 WeddingDraft::Application.routes.draw do
+  resources :users
   root 'static_pages#home'
   match '/registration', to: 'users#new', via: 'get'
   match '/program', to: 'static_pages#program', via: 'get'
