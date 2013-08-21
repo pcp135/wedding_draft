@@ -1,7 +1,10 @@
 WeddingDraft::Application.routes.draw do
-  resources :users
+  resources :users, only: [:create]
+  resources :sessions, only: [:new, :create, :destroy]
   root 'static_pages#home'
   match '/registration', to: 'users#new', via: 'get'
+  match '/signin', to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
   match '/program', to: 'static_pages#program', via: 'get'
   match '/locations', to: 'static_pages#locations', via: 'get'
   match '/hotels', to: 'static_pages#hotels', via: 'get'

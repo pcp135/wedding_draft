@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+$grayMediumLight: #eaeaea;
+$lightGray: #999;
+
 html {
 	overflow-y: scroll;
 }
@@ -56,8 +59,6 @@ p {
 	text-decoration: none;
 }
 
-$grayMediumLight: #eaeaea;
-
 @mixin box_sizing {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -96,3 +97,28 @@ input {
 	@extend .control-group;
 	@extend .error;
 }
+
+footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid $grayMediumLight;
+	color: $lightGray;
+	a {
+		color: #555;
+		&:hover {
+			color: #222;
+		}
+	}
+	small {
+		float: left;
+	}
+	ul {
+		float: right;
+		list-style: none;
+		li {
+			float: left;
+			margin-left: 10px;
+		}
+	}
+}
+
