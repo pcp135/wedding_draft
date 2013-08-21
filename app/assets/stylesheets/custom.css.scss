@@ -122,3 +122,13 @@ footer {
 	}
 }
 
+img {
+	padding: 10px;
+	&.left {
+		float: left;
+	}
+	&.right {
+		float: right;
+	}
+} 
+

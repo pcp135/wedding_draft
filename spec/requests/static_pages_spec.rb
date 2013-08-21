@@ -66,7 +66,7 @@ describe "StaticPages" do
       before { visit registry_path }
       it {should have_content('Gift Registry')}
       it {should have_title('Gift Registry')}
-      it {should have_content("Sorry, we've not had a chance to organise this yet, please check back later")}
+      it {should have_content("list of things we would really enjoy")}
     end
       
     describe "RSVP Page" do
