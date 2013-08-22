@@ -4,7 +4,6 @@
 			<%= link_to "Phil & Stef's Wedding - test", root_path, id: "logo" %>
 			<nav>
 				<ul class="nav pull-right">
-					<li><%= link_to "Home", root_path %></li>
 					<% if signed_in? %>
 						<li><%= link_to "Program", program_path %></li>
 						<li><%= link_to "Locations", locations_path %></li>
@@ -19,6 +18,7 @@
 					<% end %>
 				</ul>
 			</nav>
+			</div>
 		</div>
 	</div>
 </header>
