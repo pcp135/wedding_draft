@@ -26,13 +26,13 @@ describe "Authentication" do
         click_button "Sign in"
       end
       it {should have_title('Welcome to our Wedding Website') }
-      it {should have_link('Sign out', href: signout_path)}
-      it {should_not have_link('Sign in', href: signin_path)}
-      it {should_not have_link('Register', href: registration_path)}
+      it {should have_link('Sign out')}
+      it {should_not have_link('Sign in')}
+      it {should_not have_link('Register')}
       describe "followed by signout" do
         before { click_link "Sign out"}
-        it {should have_link('Sign in', href: signin_path)}
-        it {should have_link('Register', href: registration_path)}
+        it {should have_link('Sign in')}
+        it {should have_link('Register')}
       end
     end
   end
