@@ -1,0 +1,28 @@
+<% provide(:title, "Registrierung") %>
+<h1>Registrierung</h1>
+
+<p>Um Euch für die Homepage zu registrieren, tragt bitte Euren Namen und Eure -Email Adresse ein und wählt ein Passwort. Das System wird Euch kurz eine E-mail zur Bestätigung schicken und dann kann es losgehen. </p>
+
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@user) do |f| %>
+			<%= render 'shared/error_messages' %>
+
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+			
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+			<%= f.label :password, "Passwort" %>
+			<%= f.password_field :password %>
+
+			<%= f.label :password_confirmation, "Passwort-Wiederholung"  %>
+			<%= f.password_field :password_confirmation %>
+			
+			<%= f.submit "Registrieren", class: "btn btn-large btn-primary" %>
+		<% end %>
+	</div>		
+</div>	
+		
+			

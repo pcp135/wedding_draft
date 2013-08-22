@@ -1,7 +1,7 @@
 <% provide(:title, "Sign in")%>
 <h1>Sign in</h1>
 
-<p>Thanks for visiting our wedding page.  Please sign-in below to access the rest of the details.  Haven't registered yet? <%= link_to "Register now!", registration_path %></p>
+<p>Please sign-in below to access the full homepage.  Haven't registered yet? <%= link_to "Register now!", registration_path %></p>
 <div class="row">
 	<div class="span6 offset3">
 		<%= form_for(:session, url: sessions_path) do |f| %>

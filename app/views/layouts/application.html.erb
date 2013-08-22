@@ -26,10 +26,15 @@
 		<% flash.each do |key, value| %>
 			<div class="alert alert-<%= key %>"><%= value %></div>
 		<% end %>
-		<ul class="nav pull-right">
-			<li><%= link_to image_tag("EN.png"), params.merge({:locale => :en}) %></li>
-			<li><%= link_to image_tag("DE.png"), params.merge({:locale => :de}) %></li>
-		</ul>
+		<div class="span2 pull-left center">
+			<h4><strong><%= ((Time.gm(2014, 6, 14, 12, 00, 00)-Time.now)/86400).round %></strong><br><small>days to go</small></h4>
+		</div>
+		<div class="span1 pull-right center">
+			<ul class="nav">
+				<li><%= link_to image_tag("EN.png"), params.merge({:locale => :en}) %></li>
+				<li><%= link_to image_tag("DE.png"), params.merge({:locale => :de}) %></li>
+			</ul>
+		</div>
 		<%= yield %>
 		<%= debug(params) if Rails.env.development? %>
 		<%= render 'layouts/footer' %>
