@@ -1,0 +1,24 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class="navbar-inner">
+		<div class="container">
+			<%= link_to "Steffi und Phil's Hochzeit - dev", root_path, id: "logo" %>
+			<nav>
+				<ul class="nav pull-right">
+					<% if signed_in? %>
+						<li><%= link_to "Ablauf", program_path %></li>
+						<li><%= link_to "Lokalitäten", locations_path %></li>
+						<li><%= link_to "Hotels", hotels_path %></li>
+						<li><%= link_to "Hochzeit", germanvsenglish_path %></li>
+						<li><%= link_to "Umgebung", region_path %></li>
+						<li><%= link_to "Hochzeitsliste", registry_path %></li>
+						<li><%= link_to "RSVP", rsvp_path %></li>
+					<% else %>
+						<li><%= link_to "Anmeldung", signin_path %></li>
+						<li><%= link_to "Registrierung", registration_path %></li>
+					<% end %>
+				</ul>
+			</nav>
+			</div>
+		</div>
+	</div>
+</header>
