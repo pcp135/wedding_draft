@@ -1,0 +1,10 @@
+<footer class="footer">
+	<nav>
+		<ul>
+			<% if signed_in? %>
+				<li><%= link_to "Kontaktaufnahme", contact_path %></li>
+				<li><%= link_to "Abmelden", signout_path, method: "delete" %></li>
+			<% end %>
+		</ul>
+	</nav>
+</footer>
