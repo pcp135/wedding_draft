@@ -22,3 +22,5 @@ doc/
 .DS_Store
 .idea
 .secret
+
+/config/initializers/setup_mail.rb
