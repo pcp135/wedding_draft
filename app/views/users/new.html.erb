@@ -1,7 +1,7 @@
 <% provide(:title, "Register") %>
 <h1>Register</h1>
 
-<p>Thanks for visiting our wedding page.  So that not just anyone can access all the details we'd like you to just quickly register, please provide your name and e-mail address below, we'll send you a quick e-mail to confirm the address and then we'll be all set!</p>
+<p>In order to register for the page, please enter your name and email address and pick a password and then you're all set. </p>
 
 <div class="row">
 	<div class="span6 offset3">
@@ -17,7 +17,7 @@
 			<%= f.label :password %>
 			<%= f.password_field :password %>
 
-			<%= f.label :password_confirmation, "Confirmation" %>
+			<%= f.label :password_confirmation %>
 			<%= f.password_field :password_confirmation %>
 			
 			<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
