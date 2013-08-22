@@ -46,7 +46,7 @@ describe "StaticPages" do
     describe "German vs English Page" do 
       before { visit germanvsenglish_path }
       it {should have_content('German vs English')}
-      it {should have_title('German vs English Weddings')}
+      it {should have_title('German vs. English Weddings')}
       it {should have_content('ceremony')}
       it {should have_content('outfits')}
       it {should have_content('break')}
