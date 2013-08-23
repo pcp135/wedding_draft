@@ -22,6 +22,10 @@ class ApplicationController < ActionController::Base
         redirect_to signin_path, notice: "Please sign in."
       end
     end
+
+    def user_params
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
     
   
 end
