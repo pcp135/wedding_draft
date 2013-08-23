@@ -1,21 +1,21 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
 	<div class="navbar-inner">
 		<div class="container">
-			<%= link_to "Stef & Phil's Wedding - dev", root_path, id: "logo" %>
+			<%= link_to t(:s_p_wedding) + " - dev", root_path, id: "logo" %>
 			<nav>
 				<ul class="nav pull-right">
-					<li><%= link_to "Home", root_path %></li>
+					<li><%= link_to t(:home), root_path %></li>
 					<% if signed_in? %>
-						<li><%= link_to "Program", program_path %></li>
-						<li><%= link_to "Locations", locations_path %></li>
-						<li><%= link_to "Hotels", hotels_path %></li>
-						<li><%= link_to "Wedding", germanvsenglish_path %></li>
-						<li><%= link_to "Region", region_path %></li>
-						<li><%= link_to "Registry", registry_path %></li>
-						<li><%= link_to "RSVP", rsvp_path %></li>
+						<li><%= link_to t(:program), program_path %></li>
+						<li><%= link_to t(:locations), locations_path %></li>
+						<li><%= link_to t(:hotels), hotels_path %></li>
+						<li><%= link_to t(:wedding), germanvsenglish_path %></li>
+						<li><%= link_to t(:region), region_path %></li>
+						<li><%= link_to t(:registry), registry_path %></li>
+						<li><%= link_to t(:rsvp), rsvp_path %></li>
 					<% else %>
-						<li><%= link_to "Sign in", signin_path %></li>
-						<li><%= link_to "Register", registration_path %></li>
+						<li><%= link_to t(:sign_in), signin_path %></li>
+						<li><%= link_to t(:register), registration_path %></li>
 					<% end %>
 				</ul>
 			</nav>
