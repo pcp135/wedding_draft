@@ -1,4 +1,5 @@
 WeddingDraft::Application.routes.draw do
+  resources :password_resets
   resources :users, only: [:create]
   resources :sessions, only: [:new, :create, :destroy]
   root 'static_pages#home'
