@@ -43,6 +43,11 @@ en:
   registration_help: "In order to register for the page, please enter your name and email address and pick a password and then you're all set."
   create_account: "Create my account"
   please_sign_in: "Please sign in."
-  
+  welcome: "Welcome to our wedding website "
+  password_reset_mail_sent: "Email sent with password reset instructions."
+  password_reset_expired: "Password reset has expired."
+  password_reset_success: "Password has been reset."
+  welcome_back: "Welcome back "
+  invaild_password: "Invalid email/password combination"
   
   
