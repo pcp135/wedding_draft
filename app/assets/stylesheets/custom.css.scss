@@ -9,6 +9,7 @@ html {
 
 body {
 	padding-top: 60px;
+	padding-bottom: 40px;
 }
 
 section {
@@ -114,9 +115,12 @@ footer {
 	ul {
 		float: right;
 		list-style: none;
+		margin-bottom: 0px;
 		li {
 			float: left;
 			margin-left: 10px;
+			padding-top: 10px;
+			padding-bottom: 10px;
 		}
 	}
 }
