@@ -1,14 +1,12 @@
-<% if signed_in? %>
-	<footer class="footer navbar-fixed-bottom">
-		<div class="navbar-inner">
-			<div class="container">
-				<nav>
-					<ul class="pull-right">
-						<li><%= link_to t(:contact_us), contact_path %></li>
-						<li><%= link_to t(:sign_out), signout_path, method: "delete" %></li>
-					</ul>
-				</nav>
-			</div>
+<footer class="footer navbar-fixed-bottom">
+	<div class="navbar-inner">
+		<div class="container">
+			<nav>
+				<ul class="pull-right">
+					<li><%= link_to t(:contact_us), contact_path %></li>
+					<li><%= link_to t(:sign_out), signout_path, method: "delete" %></li>
+				</ul>
+			</nav>
 		</div>
-	</footer>
-<% end %>
+	</div>
+</footer>
