@@ -50,5 +50,6 @@ en:
   welcome_back: "Welcome back "
   invalid_password: "Invalid email/password combination"
   days_left: "days to go"
-  
+  form_contains: "The form contains"
+  error: "error"
   

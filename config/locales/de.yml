@@ -50,7 +50,21 @@ de:
   welcome_back: "Willkommen zurück "
   invalid_password: "Email und Passwort passen nicht zusammen"
   days_left: "Tage zu gehen"
-  
-  
-  
-  
+  form_contains: "Das Formular enthält"
+  error: "Fehler"
+  activerecord:
+      errors:
+        models:
+          user:
+            attributes:
+              email:
+                blank: "darf nicht leer sein"
+                invalid: "ist ungültig"
+                taken: "ist bereits getan"
+              name: 
+                blank: "darf nicht leer sein"
+              password: 
+                blank: "darf nicht leer sein"
+                too_short: "ist zu kurz (mindestens 6 Zeichen)"
+              password_confirmation:
+                confirmation: "nicht mit Passwort"
