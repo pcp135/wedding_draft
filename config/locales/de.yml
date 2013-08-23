@@ -36,4 +36,12 @@ de:
   reset_password: "Kennwort zurücksetzen"
   password: "Passwort"
   password_confirmation: "Passwort-Wiederholung"
-  update_password: "Passwort aktualisieren"  
+  update_password: "Passwort aktualisieren"
+  forgotten_password: "Passwort vergessen?"  
+  pls_sign_in: "Bitte meldet Euch unten mit Eurer E-mail Adresse und Eurem Passwort an. Du hast dich noch nicht registriert?"
+  register_now: "Hier geht's lang!"
+  
+  
+  
+  
+  
