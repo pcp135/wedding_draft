@@ -1,7 +1,7 @@
-<% provide(:title, "Register") %>
-<h1>Register</h1>
+<% provide(:title, t(:register)) %>
+<h1><%=t(:register)%></h1>
 
-<p>In order to register for the page, please enter your name and email address and pick a password and then you're all set. </p>
+<p><%= t(:registration_help) %></p>
 
 <div class="row">
 	<div class="span6 offset3">
@@ -14,13 +14,13 @@
 			<%= f.label :email %>
 			<%= f.text_field :email %>
 
-			<%= f.label :password %>
+			<%= f.label :password, t(:password) %>
 			<%= f.password_field :password %>
 
-			<%= f.label :password_confirmation %>
+			<%= f.label :password_confirmation, t(:password_confirmation) %>
 			<%= f.password_field :password_confirmation %>
 			
-			<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+			<%= f.submit t(:create_account), class: "btn btn-large btn-primary" %>
 		<% end %>
 	</div>		
 </div>	
