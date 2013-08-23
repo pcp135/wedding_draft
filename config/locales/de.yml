@@ -33,3 +33,7 @@ de:
   rsvp: "RSVP"
   sign_in: "Anmeldung"
   register: "Registrierung"
+  reset_password: "Kennwort zurücksetzen"
+  password: "Passwort"
+  password_confirmation: "Passwort-Wiederholung"
+  update_password: "Passwort aktualisieren"  
