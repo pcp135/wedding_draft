@@ -49,5 +49,6 @@ en:
   password_reset_success: "Password has been reset."
   welcome_back: "Welcome back "
   invalid_password: "Invalid email/password combination"
+  days_left: "days to go"
   
   
