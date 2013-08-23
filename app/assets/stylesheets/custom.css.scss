@@ -8,9 +8,10 @@ html {
 }
 
 body {
-	background: url(vine-tr.png), url(vine-br.png), url(vine-tl.png), url(vine-bl.png);
+	background: url(vine-tr.png), url(vine-tl.png);
+	background-color: #ffffe9;
 	background-repeat:no-repeat;
-	background-position: right top, right bottom, top left, bottom left;
+	background-position: right top, top left;
 	padding-top: 60px;
 	padding-bottom: 40px;
 }
