@@ -48,6 +48,6 @@ en:
   password_reset_expired: "Password reset has expired."
   password_reset_success: "Password has been reset."
   welcome_back: "Welcome back "
-  invaild_password: "Invalid email/password combination"
+  invalid_password: "Invalid email/password combination"
   
   

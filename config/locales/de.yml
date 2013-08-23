@@ -48,7 +48,7 @@ de:
   password_reset_expired: "Dieser Link ist nicht mehr gültig."
   password_reset_success: "Das Passwort wurde geändert."
   welcome_back: "Willkommen zurück "
-  invaild_password: "Email und Passwort passen nicht zusammen"
+  invalid_password: "Email und Passwort passen nicht zusammen"
   
   
   
