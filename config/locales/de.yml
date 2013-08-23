@@ -19,6 +19,6 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  contact_us: "Contact Us"
-  sign_out: "Sign out"
+de:
+  contact_us: "Kontaktaufnahme"
+  sign_out: "Abmelden"
