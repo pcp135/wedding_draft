@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "UserPages" do
   subject {page}
   describe "Registration Page" do
-    before {visit registration_path(locale: I18n.locale )}
+    before {visit registration_path(locale: :en )}
     it { should have_content('Register') }
     it { should have_title('Register') } 
   end
@@ -14,7 +14,7 @@ describe "UserPages" do
   #   it {should have_title(user.name)}
   # end
   describe "Signup" do
-    before {visit registration_path(locale: I18n.locale )}
+    before {visit registration_path(locale: :en )}
     let(:submit) { "Create my account"}
     describe "with invalid information" do
       it "should not create a user" do
