@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "StaticPages" do
   subject { page }
-  before {visit signin_path }
+  before {visit signin_path(locale: :en ) }
   describe "with signed in user" do
     let(:user) { FactoryGirl.create(:user)}
     before do
@@ -11,13 +11,13 @@ describe "StaticPages" do
       click_button "Sign in"
     end
     describe "Home Page" do
-      before { visit root_path }
+      before { visit home_path(locale: :en ) }
       it { should have_content('Welcome to our Wedding Website') }
       it { should have_title('Welcome to our Wedding Website') }
     end
   
     describe "Program Page" do
-      before { visit program_path }
+      before { visit program_path(locale: :en ) }
       it {should have_content('Program')}
       it {should have_title('Wedding Program')}
       it {should have_content('Friday')}
@@ -26,7 +26,7 @@ describe "StaticPages" do
     end
   
     describe "Locations Page" do
-      before { visit locations_path }
+      before { visit locations_path(locale: :en ) }
       it {should have_content('Locations')}
       it {should have_title('Locations')}
       it {should have_content('Burg Schwarzenstein')}
@@ -35,7 +35,7 @@ describe "StaticPages" do
     end
   
     describe "Hotels Page" do
-      before { visit hotels_path }
+      before { visit hotels_path(locale: :en ) }
       it {should have_content('Hotels')}
       it {should have_title('Hotels')}
       it {should have_content('Schwarzenstein')}
@@ -44,7 +44,7 @@ describe "StaticPages" do
     end
   
     describe "German vs English Page" do 
-      before { visit germanvsenglish_path }
+      before { visit germanvsenglish_path(locale: :en ) }
       it {should have_content('German vs English')}
       it {should have_title('German vs. English Weddings')}
       it {should have_content('ceremony')}
@@ -53,7 +53,7 @@ describe "StaticPages" do
     end
   
     describe "The Region Page" do
-      before { visit region_path }
+      before { visit region_path(locale: :en ) }
       it {should have_content('The Region')}
       it {should have_title('The Region')}
       it {should have_content('Rhein')}
@@ -63,21 +63,21 @@ describe "StaticPages" do
     end
   
     describe "Registry Page" do
-      before { visit registry_path }
+      before { visit registry_path(locale: :en ) }
       it {should have_content('Gift Registry')}
       it {should have_title('Gift Registry')}
       it {should have_content("list of things we would really enjoy")}
     end
       
     describe "RSVP Page" do
-      before { visit rsvp_path }
+      before { visit rsvp_path(locale: :en ) }
       it {should have_content('RSVP')}
       it {should have_title('RSVP')}
       it {should have_content("we put together a few questions for you")}
     end
 
     describe "Contact Page" do
-      before { visit contact_path }
+      before { visit contact_path(locale: :en ) }
       it {should have_content('Contact Us')}
       it {should have_title('Contact Us')}
       it {should have_content("phil@parsons.uk.com")}

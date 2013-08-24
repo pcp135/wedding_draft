@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       sign_in user
       flash[:success] = t(:welcome_back) + user.name
-      redirect_back_or root_path
+      redirect_back_or home_path
     else
       flash.now[:error] = t(:invalid_password)
       render 'new'
@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
   
   def destroy
     sign_out
-    redirect_to root_url
+    redirect_to home_path
   end
   
 end
