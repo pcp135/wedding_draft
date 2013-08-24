@@ -22,6 +22,10 @@ class User < ActiveRecord::Base
     save!
     UserMailer.password_reset(self).deliver
   end
+
+  def send_welcome
+    UserMailer.welcome(self).deliver
+  end
   
   def generate_token(column)
     begin

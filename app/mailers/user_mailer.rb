@@ -5,4 +5,10 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail :to => user.email, :subject => t(:reset_password)
   end
+
+  def welcome(user)
+    @user = user
+    mail :to => user.email, :subject => t(:welcome)
+  end
+
 end
