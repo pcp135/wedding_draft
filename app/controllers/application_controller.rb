@@ -22,6 +22,10 @@ class ApplicationController < ActionController::Base
         redirect_to signin_path, locale: I18n.locale, notice: t(:please_sign_in)
       end
     end
+    
+    def admin_user
+      redirect_to home_path, locale: I18n.locale unless current_user.admin?
+    end
 
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)

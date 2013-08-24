@@ -29,6 +29,22 @@ describe "Authentication" do
       it {should have_link('Sign out')}
       it {should_not have_link('Sign in')}
       it {should_not have_link('Register')}
+      describe "visiting the users index" do
+        before { visit users_path(locale: :en)}
+        describe "with non-admin access" do
+          it {should have_title("Welcome to our Wedding Website")}
+        end
+        describe "with admin access" do
+          before do
+            @user = User.new(name: "Example User", email: "user@example.com",
+            password: "foobar", password_confirmation: "foobar")
+            @user.save!
+            @user.toggle!(:admin)
+            sign_in @user
+          end
+          it {should have_title("Users")}          
+        end        
+      end
       describe "followed by signout" do
         before { click_link "Sign out"}
         it {should have_link('Sign in')}
@@ -38,6 +54,12 @@ describe "Authentication" do
   end
   describe "authorization" do
     describe "for non-signed in users" do
+      describe "in the Users controller" do
+        describe "visiting the users index" do
+          before { visit users_path(locale: :en)}
+          it {should have_title("Sign in")}
+        end
+      end
       let(:user) { FactoryGirl.create(:user)}
       describe "in the static pages" do
         describe "visiting the program page" do

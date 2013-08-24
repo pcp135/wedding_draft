@@ -3,7 +3,7 @@ WeddingDraft::Application.routes.draw do
   root 'static_pages#home'
   scope "(:locale)", /en|de/ do
     resources :password_resets
-    resources :users, only: [:create]
+    resources :users
     resources :sessions, only: [:new, :create, :destroy]
     match '/home', to: 'static_pages#home', via: 'get'
     match '/registration', to: 'users#new', via: 'get'

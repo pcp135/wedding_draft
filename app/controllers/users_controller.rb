@@ -1,8 +1,13 @@
 class UsersController < ApplicationController
-  skip_before_action :signed_in_user
+  skip_before_action :signed_in_user, except: [:index]
+  before_action :admin_user, only: [:index]
   
   def new
     @user = User.new
+  end
+  
+  def index
+    @users = User.all
   end
   
   def create

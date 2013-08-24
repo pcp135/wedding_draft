@@ -2,6 +2,17 @@ require 'spec_helper'
 
 describe "UserPages" do
   subject {page}
+  describe "index" do
+    let(:user) {FactoryGirl.create(:user)}
+    before do 
+      sign_in user
+      user.toggle!(:admin)
+      visit users_path(locale: :en) 
+    end
+    it { should have_title "All Users"}
+    it { should have_content "All Users"}
+  end
+  
   describe "Registration Page" do
     before {visit registration_path(locale: :en )}
     it { should have_content('Register') }
