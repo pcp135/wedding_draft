@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in @user
+      @user.send_welcome
       flash[:success] = t(:welcome) + @user.name
       redirect_to root_path
     else
