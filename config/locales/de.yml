@@ -50,6 +50,7 @@ de:
   welcome_back: "Willkommen zurück "
   invalid_password: "Email und Passwort passen nicht zusammen"
   days_left: "Tage noch"
+  my_profile: "Mein Konto"
   form_contains: "Das Formular enthält"
   error: "Fehler"
   activerecord:
