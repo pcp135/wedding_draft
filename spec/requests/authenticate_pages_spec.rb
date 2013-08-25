@@ -20,15 +20,12 @@ describe "Authentication" do
     end
     describe "with valid information" do
       let(:user) { FactoryGirl.create(:user)}
-      before do
-        fill_in "Email", with: user.email.upcase
-        fill_in "Password", with: user.password
-        click_button "Sign in"
-      end
+      before { sign_in user }
       it {should have_title('Welcome to our Wedding Website') }
       it {should have_link('Sign out')}
       it {should_not have_link('Sign in')}
       it {should_not have_link('Register')}
+      it {should have_link('Users', users_url(:en))}
       describe "visiting the users index" do
         before { visit users_path(locale: :en)}
         describe "with non-admin access" do
@@ -41,8 +38,9 @@ describe "Authentication" do
             @user.save!
             @user.toggle!(:admin)
             sign_in @user
+            visit users_path(locale: :en)
           end
-          it {should have_title("Users")}          
+          it {should have_title("All users")}          
         end        
       end
       describe "followed by signout" do

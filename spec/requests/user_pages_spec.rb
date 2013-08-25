@@ -32,14 +32,19 @@ describe "UserPages" do
     end
   end
   describe "index" do
-    let(:user) {FactoryGirl.create(:user)}
     before do 
-      sign_in user
-      user.toggle!(:admin)
+      sign_in FactoryGirl.create(:user)
+      FactoryGirl.create(:user, name: "Bob", email: "bob@example.com")
+      FactoryGirl.create(:user, name: "Ben", email: "ben@example.com")
       visit users_path(locale: :en) 
     end
-    it { should have_title "All Users"}
-    it { should have_content "All Users"}
+    it { should have_title "All users"}
+    it { should have_content "All users"}
+    it "should list each user" do
+      User.all.each do |user|
+        expect(page).to have_selector('li', text: user.name)
+      end
+    end
   end
   describe "Registration Page" do
     before {visit registration_path(locale: :en )}
