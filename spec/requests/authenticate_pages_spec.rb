@@ -25,7 +25,7 @@ describe "Authentication" do
       it {should have_link('Sign out')}
       it {should_not have_link('Sign in')}
       it {should_not have_link('Register')}
-      it {should have_link('Users', users_url(:en))}
+      it {should_not have_link('Users', users_url(:en))}
       describe "visiting the users index" do
         before { visit users_path(locale: :en)}
         describe "with non-admin access" do
@@ -40,6 +40,7 @@ describe "Authentication" do
             sign_in @user
             visit users_path(locale: :en)
           end
+          it {should have_link('Users', users_url(:en))}
           it {should have_title("All users")}          
         end        
       end

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  skip_before_action :signed_in_user, except: [:index, :edit, :update]
+  skip_before_action :signed_in_user, except: [:edit, :destroy, :index, :update]
   before_action :correct_user, only: [:edit, :update]
-  before_action :admin_user, only: [:destroy]
+  before_action :admin_user, only: [:index, :destroy]
   
   def new
     @user = User.new
@@ -27,16 +27,12 @@ class UsersController < ApplicationController
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       sign_in @user
-      redirect_to @user
+      redirect_to edit_user_path(@user)
     else
       render 'edit'
     end
   end
   
-  def show
-    @user=User.find(params[:id])
-  end
-
   def edit
   end
   
