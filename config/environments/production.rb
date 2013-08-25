@@ -81,5 +81,4 @@ WeddingDraft::Application.configure do
   config.action_mailer.default_url_options = { :host => "parsons-hense-s.herokuapp.com" }
   config.action_mailer.delivery_method = :smtp
   
->>>>>>> develop
 end
