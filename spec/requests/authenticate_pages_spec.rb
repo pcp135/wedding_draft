@@ -53,6 +53,19 @@ describe "Authentication" do
     end
   end
   describe "authorization" do
+    describe "as wrong user" do
+      let(:user) { FactoryGirl.create(:user)}
+      let(:wrong_user) { FactoryGirl.create(:user, email: "wrong@example.com")}
+      before { sign_in user, no_capybara: true}
+      describe "visiting the users edit page" do
+        before {visit edit_user_path(:en, wrong_user)}
+        it {should_not have_title('Edit user')}
+      end
+      describe "submitting a patch request to users update action" do
+        before {patch user_path(:en, wrong_user)}
+        specify { expect(response).to redirect_to(home_path(:en))}
+      end
+    end
     describe "for non-signed in users" do
       describe "in the Users controller" do
         describe "visiting the users index" do
@@ -61,6 +74,16 @@ describe "Authentication" do
         end
       end
       let(:user) { FactoryGirl.create(:user)}
+      describe "in the users controller " do
+        describe "visiting the edit page" do
+          before {visit edit_user_path(:en, user)}
+          it {should have_title('Sign in')}
+        end
+        describe "submitting to the update action" do
+          before {patch user_path(:en, user)}
+          specify { expect(response).to redirect_to(signin_path(:en))}
+        end
+      end
       describe "in the static pages" do
         describe "visiting the program page" do
           before { visit program_path(locale: :en)}

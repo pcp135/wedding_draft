@@ -23,6 +23,11 @@ class ApplicationController < ActionController::Base
       end
     end
     
+    def correct_user
+      @user=User.find(params[:id])
+      redirect_to home_path, locale: I18n.locale unless current_user?(@user) or current_user.admin?
+    end
+    
     def admin_user
       redirect_to home_path, locale: I18n.locale unless current_user.admin?
     end

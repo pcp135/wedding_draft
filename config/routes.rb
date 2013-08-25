@@ -1,7 +1,7 @@
 WeddingDraft::Application.routes.draw do
   match '/:locale', to: 'static_pages#home', via: 'get'
   root 'static_pages#home'
-  scope "(:locale)", /en|de/ do
+  scope "/:locale" do
     resources :password_resets
     resources :users
     resources :sessions, only: [:new, :create, :destroy]
