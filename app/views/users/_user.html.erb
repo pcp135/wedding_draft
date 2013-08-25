@@ -1,0 +1,9 @@
+<li>
+	<div class="span4"><%= link_to user.name, edit_user_path(user) %></div> 
+	<div class="span4"><%= mail_to user.email, user.email %></div>
+	<% if current_user.admin? && !current_user?(user) && !user.admin? %>
+		<div class="span2"><%= link_to "delete", user, method: :delete, 
+					data: { confirm: "Are you sure?" } %>
+		</div>
+	<% end %>
+</li>
