@@ -134,7 +134,7 @@ footer {
 	a {
 		color: #555;
 		&:hover {
-			color: #000;
+			color: #fff;
 			text-decoration: none;
 		}
 	}
@@ -151,9 +151,6 @@ footer {
 			padding-top: 10px;
 			padding-bottom: 10px;
 		}
-	}
-	div.navbar-inner {
-		background-color: #555;
 	}
 }
 
