@@ -1,4 +1,3 @@
-ActionMailer::Base.raise_delivery_errors = false
 ActionMailer::Base.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
