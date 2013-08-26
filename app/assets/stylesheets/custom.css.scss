@@ -1,5 +1,9 @@
 @import "bootstrap";
-
+@font-face {
+	font-family: 'MyAmaze';
+	src: url('amaze.ttf');
+	}
+	
 $grayMediumLight: #eaeaea;
 $lightGray: #999;
 
@@ -8,7 +12,11 @@ html {
 }
 
 body {
-	padding-top: 60px;
+/*	background: url(vine-tr.png), url(vine-tl.png);*/
+	background-color: #f6f6d4;
+/*	background-repeat:no-repeat;
+	background-position: right top, top left;
+*/	padding-top: 60px;
 	padding-bottom: 40px;
 }
 
@@ -30,13 +38,24 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1;
+	font-family: 'MyAmaze';
+	font-size: 1em;
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 2.5em;
 	letter-spacing: -2px;
 	margin-bottom: 30px;
 	text-align: center;
+}
+
+div.script {
+	font-family: 'MyAmaze';		
+	font-size: 1.3em;	
+}
+
+h2 {
+	font-size:1.35em;
 }
 
 p {
@@ -44,13 +63,23 @@ p {
 	line-height: 1.7em;
 }
 
+ol {
+	line-height: 1.7em;
+	margin-left: 300px;
+	li {
+		font-size: 1.1em;
+		line-height: 1.7em;
+	}
+}
+
 #logo {
+	font-family: 'MyAmaze';
 	float: left;
 	margin-right: 10px;
 	font-size: 1.7em;
 	color: #fff;
 	letter-spacing: -1px;
-	padding-top: 9px;
+	padding-top: 8px;
 	font-weight: bold;
 	line-height: 1;
 }
@@ -58,6 +87,10 @@ p {
 #logo:hover {
 	color: #fff;
 	text-decoration: none;
+}
+
+#language:hover {
+	background-color: transparent;
 }
 
 @mixin box_sizing {
@@ -106,7 +139,8 @@ footer {
 	a {
 		color: #555;
 		&:hover {
-			color: #222;
+			color: #fff;
+			text-decoration: none;
 		}
 	}
 	small {
