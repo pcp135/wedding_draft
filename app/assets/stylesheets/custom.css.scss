@@ -12,19 +12,12 @@ html {
 }
 
 body {
-	background: url(vine-tr.png), url(vine-tl.png);
+/*	background: url(vine-tr.png), url(vine-tl.png);*/
 	background-color: #f6f6d4;
-	background-repeat:no-repeat;
+/*	background-repeat:no-repeat;
 	background-position: right top, top left;
-	padding-top: 60px;
+*/	padding-top: 60px;
 	padding-bottom: 40px;
-	font-family: 'MyAmaze';
-	font-size: 1em;
-}
-
-strong {
-	font-size: 1.3em;
-	font-weight:1900;
 }
 
 section {
@@ -45,6 +38,8 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1;
+	font-family: 'MyAmaze';
+	font-size: 1em;
 }
 
 h1 {
@@ -54,8 +49,17 @@ h1 {
 	text-align: center;
 }
 
+div.script {
+	font-family: 'MyAmaze';		
+	font-size: 1.3em;	
+}
+
+h2 {
+	font-size:1.35em;
+}
+
 p {
-	font-size: 1.3em;
+	font-size: 1.1em;
 	line-height: 1.7em;
 }
 
@@ -63,18 +67,19 @@ ol {
 	line-height: 1.7em;
 	margin-left: 300px;
 	li {
-		font-size: 1.2em;
+		font-size: 1.1em;
 		line-height: 1.7em;
 	}
 }
 
 #logo {
+	font-family: 'MyAmaze';
 	float: left;
 	margin-right: 10px;
-	font-size: 1.5em;
+	font-size: 1.7em;
 	color: #fff;
 	letter-spacing: -1px;
-	padding-top: 9px;
+	padding-top: 8px;
 	font-weight: bold;
 	line-height: 1;
 }
