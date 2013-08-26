@@ -1,8 +1,8 @@
 @import "bootstrap";
 @font-face {
 	font-family: 'MyAmaze';
-	src: url('amaze.ttf');
-	src: url('amaze.ttf') format('truetype');
+	src: font-url('amaze.ttf');
+	src: font-url('amaze.ttf') format('truetype');
 	}
 	
 $grayMediumLight: #eaeaea;
