@@ -1,19 +1,23 @@
 WeddingDraft::Application.routes.draw do
-  resources :password_resets
-  resources :users, only: [:create]
-  resources :sessions, only: [:new, :create, :destroy]
+  match '/:locale', to: 'static_pages#home', via: 'get'
   root 'static_pages#home'
-  match '/registration', to: 'users#new', via: 'get'
-  match '/signin', to: 'sessions#new', via: 'get'
-  match '/signout', to: 'sessions#destroy', via: 'delete'
-  match '/program', to: 'static_pages#program', via: 'get'
-  match '/locations', to: 'static_pages#locations', via: 'get'
-  match '/hotels', to: 'static_pages#hotels', via: 'get'
-  match '/region', to: 'static_pages#region', via: 'get'
-  match '/registry', to: 'static_pages#registry', via: 'get'
-  match '/rsvp', to: 'static_pages#rsvp', via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
-  match '/germanvsenglish', to: 'static_pages#germanvsenglish', via: 'get'
+  scope "/:locale" do
+    resources :password_resets
+    resources :users
+    resources :sessions, only: [:new, :create, :destroy]
+    match '/home', to: 'static_pages#home', via: 'get'
+    match '/registration', to: 'users#new', via: 'get'
+    match '/signin', to: 'sessions#new', via: 'get'
+    match '/signout', to: 'sessions#destroy', via: 'delete'
+    match '/program', to: 'static_pages#program', via: 'get'
+    match '/locations', to: 'static_pages#locations', via: 'get'
+    match '/hotels', to: 'static_pages#hotels', via: 'get'
+    match '/region', to: 'static_pages#region', via: 'get'
+    match '/registry', to: 'static_pages#registry', via: 'get'
+    match '/rsvp', to: 'static_pages#rsvp', via: 'get'
+    match '/contact', to: 'static_pages#contact', via: 'get'
+    match '/germanvsenglish', to: 'static_pages#germanvsenglish', via: 'get'
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
