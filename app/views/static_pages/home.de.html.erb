@@ -2,22 +2,22 @@
 
 <h1>Willkommen auf unserer Hochzeits-Homepage!</h1>
 
-<strong><p>Liebe Familie und Freunde,</p></strong>
+<div class="script"><h2><p>Liebe Familie und Freunde,</p></h2></div>
 
 <p>Wir freuen uns, dass Ihr den Weg auf unsere Homepage gefunden habt und können es kaum erwarten,<% if signed_in? %> am 14. Juni 2014<% end %> unsere Hochzeit mit Euch zu feiern.</p>
 	
 <% if signed_in? %>
 
 <%= image_tag("pic01.jpg", class: "left inline") %>
-	<p>Uns ist bewusst, dass viele von Euch eine lange Anreise haben werden und um Euch bei der Planung zu unterstützen, haben wir ein wenig recherchiert und nachgeforscht und die wichtigsten Informationen hier zusammengefasst. </p>
+	<p>Uns ist bewusst, dass viele von Euch eine lange Anreise haben werden. Um Euch bei der Planung zu unterstützen, haben wir ein wenig recherchiert und nachgeforscht und die wichtigsten Informationen hier zusammengefasst. </p>
 
 	<p>Hier könnt Ihr <%= link_to "Details", program_path %> lesen bzgl. was, wann und wo stattfindet und wie man am besten zu den <%= link_to "verschiedenen Lokalitäten", locations_path %> findet. </p>
 
 	<p>Desweiteren gibt es Hinweise zu <%= link_to "Übernachtungsmöglichkeiten", hotels_path %> in der Umgebung und welche <%= link_to "schönen Dinge", region_path %> man im Rheingau unternehmen kann. </p>
 
-	<p>Für unsere englischen Gäste haben wir auch eine kleine Zusammenfassung geschrieben inwiefern sich <%= link_to "eine deutsche und eine englische Hochzeit", germanvsenglish_path %> unterscheiden. Dies mag fuer Euch Deutsche nicht so wichtig sein, da ihr eigentlich alle mit der deutschen Tradition vertraut sein solltet, aber wenn Ihr daran interessiert seid, könnt ihr auch dort mal rumstöbern. </p>
+	<p>Für unsere englischen Gäste haben wir auch eine kleine Zusammenfassung geschrieben, inwiefern sich <%= link_to "eine deutsche und eine englische Hochzeit", germanvsenglish_path %> unterscheiden. Dies mag fuer Euch Deutsche nicht so wichtig sein, da ihr eigentlich alle mit der deutschen Tradition vertraut sein solltet, aber wenn Ihr daran interessiert seid, könnt ihr auch dort mal herumstöbern. </p>
 
-	<p>Sobald wir die Einzelheiten unserer <%= link_to "Hochzeitsliste", registry_path %> arrangiert haben, werdet Ihr hier auch einen Link zu dieser Seite finden können.  Abschließend gibt es dann auch noch die Möglichkeit zur Hochzeit <%= link_to "zu- und abzusagen", rsvp_path %> und natürlich direkt mit <%= link_to "uns in Kontakt", contact_path %> zu treten. </p>
+	<p>Sobald wir die Einzelheiten unserer <%= link_to "Hochzeitsliste", registry_path %> arrangiert haben, werdet Ihr hier auch einen Link zu dieser Seite finden können.  Außerdem gibt es dann auch noch die Möglichkeit zur Hochzeit <%= link_to "zu- und abzusagen", rsvp_path %> und natürlich direkt mit <%= link_to "uns in Kontakt", contact_path %> zu treten. </p>
 
 	<p>Wir freuen uns über jede Nachricht!</p>
 		
@@ -25,9 +25,9 @@
 	<p>Um zu vermeiden, dass sich zu viele ungebetene Besucher hier auf der Homepage umschauen, wären wir Euch dankbar, wenn Ihr Euch kurz registrieren würdet. Das dauert gar nicht lange und es muss auch nur einmal gemacht werden. </p>
 	
 <% end %>
-<strong><p>Vielen Dank und viele liebe Grüße</p>
+<div class="script"><h2><p>Vielen Dank und viele liebe Grüße</p>
 
-<p>Steffi und Phil</p></strong>
+<p>Steffi und Phil</p></h2></div>
 
 <% if not signed_in? %>
 	<div class="row">
