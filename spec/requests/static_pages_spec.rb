@@ -59,7 +59,6 @@ describe "StaticPages" do
       it {should have_content('Rhein')}
       it {should have_content('vineyards')}
       it {should have_content('cruise')}
-      it {should have_content('bike')}
     end
   
     describe "Registry Page" do
