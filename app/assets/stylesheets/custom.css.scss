@@ -12,7 +12,7 @@ html {
 }
 
 body {
-	background: url(vine-br.png), url(vine-tl.png);
+	background: image-url("vine-br.png"), image-url("vine-tl.png");
 	background-color: #f6f6d4;
 	background-repeat:no-repeat;
 	background-position: right bottom, top left;
