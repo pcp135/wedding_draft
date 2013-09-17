@@ -13,11 +13,12 @@ html {
 }
 
 body {
-/*	background: url(vine-tr.png), url(vine-tl.png);*/
+	background: image-url("vine-br.png"), image-url("vine-tl.png");
 	background-color: #f6f6d4;
-/*	background-repeat:no-repeat;
-	background-position: right top, top left;
-*/	padding-top: 60px;
+	background-repeat:no-repeat;
+	background-position: right bottom, top left;
+	background-attachment: fixed;
+	padding-top: 60px;
 	padding-bottom: 40px;
 }
 
