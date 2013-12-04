@@ -1,9 +1,9 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
 	<div class="navbar-inner">
 		<div class="container">
-			<%= link_to t(:s_p_wedding) + " - dev", home_path, id: "logo" %>
+			<%= link_to t(:s_p_wedding) + " - dev", home_path, id: "logo", class: "navbar-brand" %>
 			<nav>
-				<ul class="nav pull-right">
+				<ul class="nav navbar-nav navbar-right">
 					<!-- <li><%= link_to t(:home), home_path %></li> -->
 					<% if signed_in? %>
 						<li><%= link_to t(:program), program_path %></li>
