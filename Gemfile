@@ -12,17 +12,17 @@ gem 'bootstrap-will_paginate', '0.0.9'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3', '1.3.7'
-  gem 'rspec-rails', '2.13.1'
-  gem 'guard-rspec', '2.5.0'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
   gem 'spork-rails', github: 'sporkrb/spork-rails'
-  gem 'guard-spork', '1.5.0'
+  gem 'guard-spork'
   gem 'childprocess', '0.3.6'
   gem 'terminal-notifier-guard'
   gem 'dotenv-rails'
 end
 
 group :test do
-  gem 'selenium-webdriver', '2.0.0'
+  gem 'selenium-webdriver'
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails','4.2.1'
 end
@@ -34,7 +34,7 @@ gem 'sass-rails'
 gem 'uglifier', '2.1.1'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '4.0.0'
+gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
