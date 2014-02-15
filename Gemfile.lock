@@ -217,7 +217,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby (= 3.0.1)
   bootstrap-sass
-  bootstrap-will_paginate (= 0.0.9)
+  bootstrap-will_paginate
   capybara (= 2.1.0)
   childprocess (= 0.3.6)
   coffee-rails
@@ -228,7 +228,7 @@ DEPENDENCIES
   jbuilder (= 1.0.2)
   jquery-rails (= 2.2.1)
   pg (= 0.15.1)
-  rails (= 4.0.0)
+  rails
   rails_12factor (= 0.0.2)
   rspec-rails
   sass-rails
