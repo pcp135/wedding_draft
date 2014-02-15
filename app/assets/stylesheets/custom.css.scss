@@ -26,6 +26,10 @@ section {
 	overflow: auto;
 }
 
+.content {
+	padding-bottom: 50px;
+}
+
 textarea {
 	resize: vertical;
 }
@@ -135,8 +139,7 @@ input {
 
 
 footer {
-	margin-top: 45px;
-	padding-top: 5px;
+	margin-top: 5px;
 	color: $lightGray;
 	a {
 		color: #555;
