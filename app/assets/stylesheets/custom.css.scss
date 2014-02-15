@@ -129,6 +129,11 @@ input {
 	@extend .alert-danger;
 }
 
+.alert-notice {
+	@extend .alert-info;
+}
+
+
 footer {
 	margin-top: 45px;
 	padding-top: 5px;
