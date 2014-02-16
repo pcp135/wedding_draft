@@ -31,6 +31,7 @@ en:
   region: "Region"
   registry: "Registry"
   rsvp: "RSVP"
+  more: "More"
   sign_in: "Sign in"
   register: "Register"
   reset_password: "Reset Password"
