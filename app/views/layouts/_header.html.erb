@@ -1,25 +1,38 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-	<div class="navbar-inner">
-		<div class="container">
-			<%= link_to t(:s_p_wedding) + " - test", home_path, id: "logo", class: "navbar-brand" %>
-			<nav>
-				<ul class="nav navbar-nav navbar-right">
-					<!-- <li><%= link_to t(:home), home_path %></li> -->
-					<% if signed_in? %>
-						<li><%= link_to t(:program), program_path %></li>
-						<li><%= link_to t(:locations), locations_path %></li>
-						<li><%= link_to t(:hotels), hotels_path %></li>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to t(:s_p_wedding) + " - test", home_path, id: "logo", class: "navbar-brand" %>
+    </div>
+    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+			<li class="visible-lg"><%= link_to t(:home), home_path %></li>
+			<% if signed_in? %>
+				<li><%= link_to t(:program), program_path %></li>
+				<li><%= link_to t(:locations), locations_path %></li>
+				<li><%= link_to t(:hotels), hotels_path %></li>
+				<li class="hidden-sm"><%= link_to t(:wedding), germanvsenglish_path %></li>
+				<li class="hidden-sm"><%= link_to t(:region), region_path %></li>
+				<li class="hidden-sm"><%= link_to t(:registry), registry_path %></li>
+				<li class="hidden-sm"><%= link_to t(:rsvp), rsvp_path %></li>
+				<li class="dropdown visible-sm">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t(:more) %> <b class="caret"></b></a>
+					<ul class="dropdown-menu">
 						<li><%= link_to t(:wedding), germanvsenglish_path %></li>
 						<li><%= link_to t(:region), region_path %></li>
 						<li><%= link_to t(:registry), registry_path %></li>
 						<li><%= link_to t(:rsvp), rsvp_path %></li>
-					<% else %>
-						<li><%= link_to t(:sign_in), signin_path %></li>
-						<li><%= link_to t(:register), registration_path %></li>
-					<% end %>
-				</ul>
-			</nav>
-			</div>
-		</div>
+					<ul>
+				</li>
+			<% else %>
+				<li><%= link_to t(:sign_in), signin_path %></li>
+				<li><%= link_to t(:register), registration_path %></li>
+			<% end %>
+		</ul>
 	</div>
-</header>
+</nav>
