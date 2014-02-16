@@ -7,21 +7,27 @@
 
 <p>Informationen zur Lage von verschiedenen Hotels findet ihr auf der <%= link_to "Hotel Seite", hotels_path %>.</p>
 
-<%= image_tag("pic04.jpg", class: "right inline") %>
-<p><strong>Lokalität für Freitagabend:  </strong><br>
-Weingut Ankermühle<br>
-Kapperweg 1<br>
-65375 Oestrich-Winkel</p>
+<div class="row">
+	<div class="col-md-6">
+		<p><strong>Lokalität für Freitagabend:  </strong><br>
+		Weingut Ankermühle<br>
+		Kapperweg 1<br>
+		65375 Oestrich-Winkel</p>
 
-<p><strong>Kirche am Samstag:</strong><br>
-Evangelische Kirche Geisenheim<br>
-Winkeler Straße 83<br>
-65366 Geisenheim</p>
+		<p><strong>Kirche am Samstag:</strong><br>
+		Evangelische Kirche Geisenheim<br>
+		Winkeler Straße 83<br>
+		65366 Geisenheim</p>
 
-<p><strong>Lokalität für den Empfang nach der Kirche, die Feier am Samstagabend und das Frühstück am Sonntagmorgen:</strong><br>
-Burg Schwarzenstein<br>
-Rosengasse 32<br>
-65366 Geisenheim - Johannisberg<br></p>
+		<p><strong>Lokalität für den Empfang nach der Kirche, die Feier am Samstagabend und das Frühstück am Sonntagmorgen:</strong><br>
+		Burg Schwarzenstein<br>
+		Rosengasse 32<br>
+		65366 Geisenheim - Johannisberg<br></p>
+	</div>
+	<div class="col-md-4 col-md-offset-2">
+		<%= image_tag("pic04.jpg", class: "right inline") %>
+	</div>
+</div>
 
 <div>
 	<iframe width=100% height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msid=213619935787981326362.0004dd16626bc9fcb8416&amp;msa=0&amp;dg=feature&amp;ie=UTF8&amp;t=m&amp;ll=49.998912,7.975388&amp;spn=0.077241,0.205994&amp;z=12&amp;output=embed"></iframe><br />
