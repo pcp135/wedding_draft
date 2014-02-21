@@ -15,15 +15,19 @@ html {
 body {
 	background: image-url("vine-br.png"), image-url("vine-tl.png");
 	background-color: #f6f6d4;
-	background-repeat:no-repeat;
-	background-position: right bottom, left 40px;
+	background-repeat: no-repeat;
+	background-position: right 10px bottom 50px, left 10px top 50px;
 	background-attachment: fixed;
-	padding-top: 60px;
+	padding-top: 70px;
 	padding-bottom: 40px;
 }
 
 section {
 	overflow: auto;
+}
+
+.content {
+	padding-bottom: 50px;
 }
 
 textarea {
@@ -60,6 +64,10 @@ h2 {
 	font-size:1.35em;
 }
 
+h3 {
+	font-size:1em;
+}
+
 p {
 	font-size: 1.1em;
 	line-height: 1.7em;
@@ -76,18 +84,10 @@ ol {
 
 #logo {
 	font-family: 'MyAmaze';
-	float: left;
-	margin-right: 10px;
-	font-size: 1.7em;
-	color: #fff;
-	letter-spacing: -1px;
-	padding-top: 8px;
-	font-weight: bold;
-	line-height: 1;
+	font-size: 2em;
 }
 
 #logo:hover {
-	color: #fff;
 	text-decoration: none;
 }
 
@@ -130,13 +130,20 @@ input {
 }
 
 .field_with_errors {
-	@extend .control-group;
-	@extend .error;
+	@extend .has-error;
 }
 
+.alert-error {
+	@extend .alert-danger;
+}
+
+.alert-notice {
+	@extend .alert-info;
+}
+
+
 footer {
-	margin-top: 45px;
-	padding-top: 5px;
+	margin-top: 5px;
 	color: $lightGray;
 	a {
 		color: #555;
@@ -163,8 +170,7 @@ footer {
 
 img {
 	&.inline {
-		padding: 15px;
-		margin: 10px;
+		padding: 10px;
 	}
 	&.left {
 		float: left;

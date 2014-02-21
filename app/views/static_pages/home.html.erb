@@ -8,7 +8,7 @@
 
 <% if signed_in? %>
 
-<%= image_tag("pic01.jpg", class: "left inline") %>
+<%= image_tag("pic01.jpg", class: "left inline img-rounded img-responsive") %>
 	<p>We appreciate that quite a lot of you will have to travel to come to Burg Schwarzenstein so to make it as easy as possible for you, we have done some research and summarized key information on this homepage.</p>
 
 	<p>You can find <%= link_to "details", program_path %> on what will take place, when and where, how to get to the different <%= link_to "venues", locations_path %>, what <%= link_to "hotels", hotels_path %> are in the area and a little bit of information on the <%= link_to "dresscode", program_path %>. </p>
@@ -31,9 +31,9 @@
 
 <% if not signed_in? %>
 	<div class="row">
-		<div class="span6 offset3">
-			<%= link_to "Sign in", signin_path, class: "btn btn-large" %>
-			<%= link_to "Register", registration_path, class: "btn btn-large btn-primary" %>
+		<div class="col-md-6 col-md-offset-3">
+			<%= link_to "Sign in", signin_path, class: "btn btn-lg btn-default" %>
+			<%= link_to "Register", registration_path, class: "btn btn-lg btn-primary" %>
 		</div>
 	</div>
 <% end %>
