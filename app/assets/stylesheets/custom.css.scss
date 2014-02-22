@@ -170,12 +170,15 @@ footer {
 
 img {
 	&.inline {
+		@extend .hidden-xs;
 		padding: 10px;
 	}
 	&.left {
+		@extend .hidden-xs;
 		float: left;
 	}
 	&.right {
+		@extend .hidden-xs;
 		float: right;
 	}
 } 
